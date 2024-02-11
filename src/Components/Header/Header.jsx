@@ -25,6 +25,13 @@ function Header() {
     };
   }, []);
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header
       className={`${
@@ -33,7 +40,13 @@ function Header() {
     >
       <div className="h-16 px-6 flex justify-between items-center rounded-full relative bg-white">
         <div className="text-2xl font-medium whitespace-nowrap brand__logo">
-          <Link to="/">NFG GG</Link>
+          <Link to="/">
+            <img
+              src="src/assets/ndf-logo.png"
+              className="h-14 w-16 object-cover"
+              alt=""
+            />
+          </Link>
         </div>
         <nav
           className={`${
@@ -42,67 +55,41 @@ function Header() {
           max-lg:w-full max-lg:bg-white rounded-3xl lg:flex lg:flex-row lg:justify-between lg:gap-6 lg:static lg:text-[16px] lg:py-0 lg:px-4`}
         >
           <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `${
-                isActive ? "navbar__linkActive" : ""
-              } max-lg:underline navbar__link`
-            }
-          >
-            Home
-            <div className="navbar__linkUnderline max-lg:hidden"></div>
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `${
-                isActive ? "navbar__linkActive" : ""
-              }  max-lg:underline navbar__link`
-            }
+            to="/#about-us-section"
+            onClick={() => scrollToSection("about-us-section")}
+            className="max-lg:underline navbar__link"
           >
             About
             <div className="navbar__linkUnderline max-lg:hidden"></div>
           </NavLink>
           <NavLink
-            to="/aggregator"
-            className={({ isActive }) =>
-              `${
-                isActive ? "navbar__linkActive" : ""
-              }  max-lg:underline navbar__link`
-            }
+            to="/#aggregator-section"
+            onClick={() => scrollToSection("aggregator-section")}
+            className="max-lg:underline navbar__link"
           >
             Aggregator
             <div className="navbar__linkUnderline max-lg:hidden"></div>
           </NavLink>
           <NavLink
-            to="/features"
-            className={({ isActive }) =>
-              `${
-                isActive ? "navbar__linkActive" : ""
-              }  max-lg:underline navbar__link`
-            }
+            to="/#features-section"
+            onClick={() => scrollToSection("features-section")}
+            className="max-lg:underline navbar__link"
           >
             Features
             <div className="navbar__linkUnderline max-lg:hidden"></div>
           </NavLink>
           <NavLink
-            to="/roadmap"
-            className={({ isActive }) =>
-              `${
-                isActive ? "navbar__linkActive" : ""
-              }  max-lg:underline navbar__link`
-            }
+            to="/#roadmap-section"
+            onClick={() => scrollToSection("roadmap-section")}
+            className="max-lg:underline navbar__link"
           >
             Roadmap
             <div className="navbar__linkUnderline max-lg:hidden"></div>
           </NavLink>
           <NavLink
-            to="/contactus"
-            className={({ isActive }) =>
-              `${
-                isActive ? "navbar__linkActive" : ""
-              }  max-lg:underline navbar__link whitespace-nowrap`
-            }
+            to="/#contact-us-section"
+            onClick={() => scrollToSection("contact-us-section")}
+            className="max-lg:underline navbar__link"
           >
             Contact Us
             <div className="navbar__linkUnderline max-lg:hidden"></div>

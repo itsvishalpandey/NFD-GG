@@ -35,10 +35,6 @@ body {
   overflow: hidden;
 }
 
-.navbar__linkActive {
-  color: var(--purple-color);
-}
-
 .navbar__linkUnderline {
   height: 1px;
   width: 100%;

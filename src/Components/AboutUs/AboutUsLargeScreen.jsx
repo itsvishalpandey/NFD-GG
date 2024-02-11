@@ -1,6 +1,6 @@
 import React from "react";
 
-function MainSectionLargeScreen() {
+function AboutUsLargeScreen() {
   return (
     <>
       <div className="flex sticky top-32 gap-12">
@@ -60,4 +60,4 @@ function MainSectionLargeScreen() {
   );
 }
 
-export default MainSectionLargeScreen;
+export default AboutUsLargeScreen;

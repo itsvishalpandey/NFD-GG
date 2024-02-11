@@ -1,15 +1,18 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Home from "./Components/Home/Home";
+import AboutUs from "./Components/AboutUs/AboutUs";
 
 function App() {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function MainSectionSmallScreen() {
+function AboutUsSmallScreen() {
   const clickItems = [
     {
       id: 1,
@@ -84,4 +84,4 @@ function MainSectionSmallScreen() {
   );
 }
 
-export default MainSectionSmallScreen;
+export default AboutUsSmallScreen;

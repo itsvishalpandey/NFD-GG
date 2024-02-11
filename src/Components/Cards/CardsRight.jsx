@@ -1,6 +1,4 @@
 import React from "react";
-import img1 from "../../assets/camera.jpg";
-
 function CardsRight() {
   const cardDetails = [
     {
@@ -71,7 +69,7 @@ function CardsRight() {
 
               <div
                 className="w-full h-full absolute top-0 left-0 right-0 p-5 z-10 bg-white
-               transition-transform duration-500 delay-700 transform -translate-x-full box_hiddenData"
+               transition-transform duration-200 delay-100 transform -translate-x-full box_hiddenData"
               >
                 <h2>{card.description}</h2>
               </div>
